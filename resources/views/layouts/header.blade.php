@@ -120,19 +120,6 @@
             </a>
             
           </li>
-          
-          <li class="nav-item">
-            <a href="{{url("/produtos/listar")}}" class="nav-link">
-              Produtos
-            </a>
-            
-          </li>
-             
-          <li class="nav-item">
-            <a href="{{url("/compras/listar")}}" class="nav-link">
-               Compras   
-            </a>           
-          </li>
 
           <li class="nav-item">
             <a href="iframe.html" class="nav-link">
