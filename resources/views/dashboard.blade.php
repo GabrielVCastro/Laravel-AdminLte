@@ -1,4 +1,4 @@
- @include('layouts/header')
+    <x-dashboard.includes.header-painel></x-dashboard.includes.header-painel>
     <section class="content">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->

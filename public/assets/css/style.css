@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #06A3DA;
+    --primary: #;
     --secondary: #34AD54;
     --light: #EEF9FF;
     --dark: #091E3E;
@@ -501,4 +501,8 @@ h6,
     .footer-about {
         margin-bottom: -75px;
     }
+}
+.btn-primary:hover{
+    background-color: #f7ef6a !important;
+    border: black;
 }
