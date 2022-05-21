@@ -44,10 +44,21 @@
 <!-- AdminLTE App -->
 <script src="{{url('dist/js/adminlte.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
+<script src="{{url('js/jquery.mask.min.js')}}"></script>
+
 <script src="{{url('dist/js/demo.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{url('dist/js/pages/dashboard.js')}}"></script>
-<script src="{{url('public/js/jquery.mask.min.js')}}"></script>
-<script src="{{url('public/js/javascript.js')}}"></script>
+<script src="{{url('js/javascript.js')}}"></script>
+<script>
+   <script>
+    $(document).ready(function(){
+        $('.date').mask('00/00/0000');
+        $('.money').mask('#.##0,00', {reverse: true});
+        console.log("ola mundo")
+    });
+
+</script>
+</script>
 </body>
 </html>

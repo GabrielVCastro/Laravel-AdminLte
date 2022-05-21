@@ -9,7 +9,8 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{url('plugins/fontawesome-free/css/all.min.css')}} ">
+  {{-- <link rel="stylesheet" href="{{url('plugins/fontawesome-free/css/all.min.css')}} "> --}}
+  <link rel="stylesheet" href="{{url('plugins/fontawesome-free/css/fontawesome.min.css')}} ">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bootstrap 4 -->
@@ -26,6 +27,7 @@
   <link rel="stylesheet" href="{{url('plugins/daterangepicker/daterangepicker.css')}}">
   <!-- summernote -->
   <link rel="stylesheet" href="{{url('plugins/summernote/summernote-bs4.min.css')}}">
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -45,7 +47,7 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Usuário: {{Auth::user()->name}}</a>
       </li>
-   
+
     </ul>
 
     <!-- Right navbar links -->
@@ -72,7 +74,7 @@
         </div>
       </li>
 
- 
+
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
           <i class="fas fa-expand-arrows-alt"></i>
@@ -107,18 +109,18 @@
         </div>
       </div>
 
-   
+
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-         
+
           <li class="nav-item">
             <a href="{{ url('/clientes/listar') }}"  class="nav-link">
               Clientes
             </a>
-            
+
           </li>
 
           <li class="nav-item">

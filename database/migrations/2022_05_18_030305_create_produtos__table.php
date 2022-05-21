@@ -21,7 +21,7 @@ return new class extends Migration
             $table->double('preco_maior',10,2);
             $table->string('imagem')->default(false);
             $table->timestamps();
-            $table->softDeles();
+            $table->softDeletes();
         });
     }
 

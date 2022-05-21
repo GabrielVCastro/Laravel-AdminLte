@@ -3,7 +3,7 @@
 namespace App\Repositories\Contracts;
 
 
-interface ClienteRepositoryInterface
+interface UsuarioRepositoryInterface
 {
     public function all();
 }

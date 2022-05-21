@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutosController;
-use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\DashboardController;
 
 /*
@@ -23,7 +23,7 @@ Route::get('/', function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index']);
-    Route::get('/clientes', [ClientesController::class, 'index']);
+    Route::get('/clientes', [UsuariosController::class, 'index']);
     Route::prefix('produtos')->group(function () {
         Route::get('/listar', [ProdutosController::class, 'index']);
         Route::get('/formulario', [ProdutosController::class, 'abrirFormulario']);

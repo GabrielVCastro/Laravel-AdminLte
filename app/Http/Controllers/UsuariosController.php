@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Repositories\Contracts\ClienteRepositoryInterface;
+use App\Repositories\Contracts\UsuarioRepositoryInterface;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use Illuminate\Support\Facades\Auth;class ClientesController extends Controller
+use Illuminate\Support\Facades\Auth;class UsuariosController extends Controller
 {
-    public function index(ClienteRepositoryInterface $model)
+    public function index(UsuarioRepositoryInterface $model)
     {
         $usuarios = $model->all();
         if(!Auth::user()->adm){
@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Auth;class ClientesController extends Controller
     }
 
 
-    public function listar( ClienteRepositoryInterface $model)
+    public function listar( UsuarioRepositoryInterface $model)
     {
         $usuarios = $model->all();
         return $usuarios;
