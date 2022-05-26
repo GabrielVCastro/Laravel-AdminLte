@@ -15,7 +15,7 @@ class ProdutosController extends Controller
         $produtos = $model->all();
 
         return view('produtos/lista', [
-            'produtoJs' => true,
+            'produtoJs'=> true,
             'produtos' => $produtos
         ]);
     }
@@ -23,14 +23,13 @@ class ProdutosController extends Controller
     public function abrirFormulario()
     {
         $this->checkAdm();
-        return view("produtos/formulario", [
+        return view("produtos/formulario",[
             'titulo'    => 'Produtos',
             'produtoJs' => true
         ]);
     }
 
-    public function cadastrar(ProdutosRepository $model, Request $request)
-    {
+    public function cadastrar(ProdutosRepository $model, Request $request){
         $this->checkAdm();
         $formularioProduto = $request->all();
         $produto = $model->save([
@@ -45,8 +44,9 @@ class ProdutosController extends Controller
         $request->session('success')->now('success', 'Cadastrado com Sucesso!');
         $produtos = $model->all();
         return view('produtos/index', [
-            'produtoJs' => true,
+            'produtoJs'=> true,
             'produtos' => $produtos
         ]);
     }
+
 }
