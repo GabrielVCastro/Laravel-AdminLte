@@ -19,14 +19,25 @@ use App\Http\Controllers\DashboardController;
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/rifa', function () {
+    return view('index');
+});
 
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index']);
-    Route::get('/clientes', [UsuariosController::class, 'index']);
+
+    Route::prefix('clientes')->group(function (){
+        Route::get('/', [UsuariosController::class, 'index']);
+        Route::get('/formulario/{id}', [UsuariosController::class, 'abrirFormulario']);
+    });
+
     Route::prefix('produtos')->group(function () {
-        Route::get('/listar', [ProdutosController::class, 'index']);
+        Route::get('/', [ProdutosController::class, 'index']);
         Route::get('/formulario', [ProdutosController::class, 'abrirFormulario']);
+        Route::post('/cadastrar', [ProdutosController::class, 'cadastrar']);
+        Route::get('/excluir/{id}', [ProdutosController::class, 'delete']);
+        // Route::get('/formulario', [ProdutosController::class, 'abrirFormulario']);
     });
 });
 

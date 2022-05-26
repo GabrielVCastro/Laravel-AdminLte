@@ -3,12 +3,10 @@
 namespace App\Repositories\Contracts;
 
 
-interface UsuarioRepositoryInterface
+interface ProdutosRepositoryInterface
 {
-    public function all();
-
+    public function create();
     public function getId($id);
-
 }
 
 

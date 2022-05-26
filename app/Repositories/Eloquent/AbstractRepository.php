@@ -16,13 +16,21 @@ abstract class AbstractRepository
     }
     public function all()
     {
-
         return $this->model->all();
+    }
+
+
+    public function getId($id)
+    {
+
+        return $this->model->find($id);
 
     }
+
     protected function resolveModel()
     {
 
         return app($this->model);
     }
+
 }

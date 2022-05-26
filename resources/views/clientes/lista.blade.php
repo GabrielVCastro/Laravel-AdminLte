@@ -1,8 +1,5 @@
 <x-dashboard.includes.header-painel></x-dashboard.includes.header-painel>
 
-
-    <x-clientes.lista></x-clientes.lista>
-
    <div class="table-responsive">
        <table class="table" id="myTable">
            <thead>
@@ -28,12 +25,6 @@
        </table>
    </div>
 
-
-
-
-
-
-
 <x-dashboard.includes.footer-painel></x-dashboard.includes.footer-painel>
 
 @isset($clienteJs)
@@ -45,9 +36,6 @@
             "url": "//cdn.datatables.net/plug-ins/1.12.0/i18n/pt-BR.json"
         }
         });
-
-
-
     } );
 
 </script>

@@ -4,15 +4,13 @@ namespace App\Http\Controllers;
 use App\Repositories\Contracts\UsuarioRepositoryInterface;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use Illuminate\Support\Facades\Auth;class UsuariosController extends Controller
+class UsuariosController extends Controller
 {
     public function index(UsuarioRepositoryInterface $model)
     {
         $usuarios = $model->all();
-        if(!Auth::user()->adm){
-            return abort(404);
-        }
-        return view('clientes', [
+        $this->checkAdm();
+        return view('clientes/lista', [
             'clienteJs'=> true,
             'usuarios' => $usuarios
         ]);

@@ -1,5 +1,6 @@
 <div>
-    <form action="">
+    <form action="produtos/cadastrar" method="post">
+        @csrf
         <div class="row">
             <div class="col-12 col-md-4">
                 <label for="nome" class="form-label">Nome</label>
@@ -24,7 +25,7 @@
                 <a class="btn btn-primary btn-block mt-6" onclick="$('#imagem').trigger('click')"><i class="fas  fa-file-upload"></i>&nbsp; Inserir Imagem</a>
             </div>
             <div class="col-12 col-md-3 mt-4">
-                <a class="btn btn-success btn-block "><i class="fas fa-check-circle"></i> Salvar</a>
+                <button type="submit" class="btn btn-success btn-block "><i class="fas fa-check-circle"></i> Salvar</button>
             </div>
             <div class="col-12 col-md-3 mt-4">
                 <a class="btn btn-danger btn-block "><i class="fas fa-times-circle"></i> Voltar</a>
