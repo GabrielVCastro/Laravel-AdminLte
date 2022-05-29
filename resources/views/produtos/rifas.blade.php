@@ -6,10 +6,9 @@
             <thead>
                 <tr>
                     <th>Ação</th>
-                    <th>Código</th>
+                    <th>Valor</th>
                     <th>Nome</th>
-                    <th>Preço Menor</th>
-                    <th>Preço Maior</th>
+
                     {{-- <th>Imagem</th> --}}
 
                 </tr>
@@ -18,12 +17,11 @@
                 @foreach ($produtos as $item)
                     <tr>
                         <td>
-                            <a href="/produtos/excluir/{{ $item['id'] }}" class="btn btn-danger" da> <i class="fa fa-trash" aria-hidden="true"></i></a>
+                            <a href="/rifas/comprar/{{ $item['id'] }}" class="btn btn-success" da> <i class="fas fa-ticket-alt"></i> Comprar</a>
                         </td>
-                        <td>{{ $item['id'] }}</td>
+                        <td> R$ 1,99 </td>
                         <td>{{ $item['nome'] }}</td>
-                        <td>{{ $item['preco_menor'] }}</td>
-                        <td>{{ $item['preco_maior'] }}</td>
+
                         {{-- <td><img src="{{ url('imagens/rifas/rifa01.jpg') }}" width="100" height="100" alt="iPhone"></td> --}}
                         {{-- <td>{{ $item[''] }}</td> --}}
                     </tr>

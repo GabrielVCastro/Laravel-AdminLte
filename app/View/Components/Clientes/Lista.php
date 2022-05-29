@@ -23,6 +23,6 @@ class Lista extends Component
      */
     public function render()
     {
-        return view('components.clientes.lista', ['titulo' => 'Clientes']);
+        return view('components.clientes.lista');
     }
 }

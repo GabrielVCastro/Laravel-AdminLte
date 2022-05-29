@@ -1,5 +1,5 @@
 <x-dashboard.includes.header-painel></x-dashboard.includes.header-painel>
-
+    <h1>{{ $titulo }}</h1>
     <form action="{{ url('produtos/cadastrar') }}" method="post">
         @csrf
         <div class="row">
@@ -20,11 +20,7 @@
                 <label for="descricao" class="form-label">Descrição</label>
                 <input type="text" name='descricao' id='descricao' class="form-control">
             </div>
-            <div class="col-12 col-md-4">
-                <label for="">&nbsp;</label>
-                <input type="file" id='imagem' name='imagem' class="d-none">
-                <a class="btn btn-primary btn-block mt-6" onclick="$('#imagem').trigger('click')"><i class="fas  fa-file-upload"></i>&nbsp; Inserir Imagem</a>
-            </div>
+
             <div class="col-12 col-md-3 mt-4">
                 <button type="submit" class="btn btn-success btn-block "><i class="fas fa-check-circle"></i> Salvar</button>
             </div>
@@ -33,16 +29,6 @@
             </div>
         </div>
     </form>
-
-
-<x-dashboard.includes.footer-painel></x-dashboard.includes.footer-painel>
-@section('script')
-
-@endsection
-
-
-
-
 
 
 <x-dashboard.includes.footer-painel></x-dashboard.includes.footer-painel>

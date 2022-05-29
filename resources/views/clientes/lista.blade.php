@@ -1,7 +1,7 @@
 <x-dashboard.includes.header-painel></x-dashboard.includes.header-painel>
-
+    <h1>{{ $titulo }}</h1>
    <div class="table-responsive">
-       <table class="table" id="myTable">
+       <table class="table" id="usuarios">
            <thead>
                <tr>
                    <th>Ação</th>
@@ -19,7 +19,6 @@
                     <td>{{ $user['name'] }}</td>
                     <td>{{ $user['email'] }}</td>
                 </tr>
-
             @endforeach
            </tbody>
        </table>
@@ -27,16 +26,4 @@
 
 <x-dashboard.includes.footer-painel></x-dashboard.includes.footer-painel>
 
-@isset($clienteJs)
-<script>
-
-    $(document).ready( function () {
-        $('#myTable').DataTable({
-            "language": {
-            "url": "//cdn.datatables.net/plug-ins/1.12.0/i18n/pt-BR.json"
-        }
-        });
-    } );
-
-</script>
-@endisset
+@include('clientes.js')

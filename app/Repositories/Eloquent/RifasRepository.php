@@ -1,15 +1,15 @@
 <?php
 
 namespace App\Repositories\Eloquent;
-use App\Models\Produtos;
-class ProdutosRepository
+use App\Models\Rifas;
+class RifasRepository
 {
 
     private $model;
 
     public function __construct()
     {
-      $this->model = app(Produtos::class);
+      $this->model = app(Rifas::class);
     }
     public function all()
     {

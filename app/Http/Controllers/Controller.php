@@ -11,6 +11,7 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
+
     public function checkAdm(){
         if(!Auth::user()->adm){
             return abort(404);
@@ -22,6 +23,11 @@ class Controller extends BaseController
         $numero = str_replace(',','.',$numero);
         return $numero;
 
+    }
+
+    public function converteParaReal($numero){
+        $numero ='R$ '.number_format($numero, 2, ',', '');
+        return $numero;
     }
 
     function limparCpf($cpf = null){

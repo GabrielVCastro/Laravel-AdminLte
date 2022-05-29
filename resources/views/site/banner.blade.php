@@ -1,5 +1,6 @@
 <div>
-    <div class="container-fluid facts py-5 pt-lg-0">
+
+  <div class="container-fluid facts py-5 pt-lg-0">
         <div class="container py-5 pt-lg-0">
             <div class="row gx-0">
                 <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">

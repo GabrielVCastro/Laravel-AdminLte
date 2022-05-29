@@ -23,7 +23,7 @@ class HeaderPainel extends Component
      */
     public function render()
     {
-        return view('components.dashboard.includes.header-painel')->with('titulo','Lista de Produtos');
+        return view('components.dashboard.includes.header-painel');
     }
 
 }

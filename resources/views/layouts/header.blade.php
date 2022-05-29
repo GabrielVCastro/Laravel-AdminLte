@@ -33,10 +33,11 @@
     </head>
 
     <body class="hold-transition sidebar-mini layout-fixed">
-        {{-- <div class="preloader flex-column justify-content-center align-items-center">
+        <div class="preloader flex-column justify-content-center align-items-center">
             <img class="animation__shake" src="{{ url('dist/img/AdminLTELogo.png') }}" alt="AdminLTELogo" height="60"
                 width="60">
-        </div> --}}
+        </div>
+
 
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -96,10 +97,10 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="/dashboard" class="brand-link">
-                <img src="dist/img/AdminLTELogo.png" alt="Rifa Online" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">Rifa</span>
-              </a>
+            <a href="{{ url('/dashboard') }}" class="brand-link">
+                <img width="150" src="{{url('assets/img/logo/logoPrincipal.png')}}" alt="RIFA 1,99">
+
+            </a>
 
             <!-- Sidebar -->
             <div class="sidebar">
@@ -107,74 +108,39 @@
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
-                        @if (Auth::user()->adm)
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="nav-icon fas fa-user"></i>
-                                    <p>
-                                    Clientes
-                                    <i class="fas fa-angle-left right"></i>
-                                    </p>
-                                </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="{{ url('/clientes') }}" class="nav-link ml-2">
-                                            - Listar
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
+                    @if (Auth::user()->adm)
 
-                                        <a href="{{ url('/clientes') }}" class="nav-link ml-2">
-                                            - Cadastrar
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="nav-icon fas fa-clipboard"></i>
-                                    <p>
-                                    Produtos
-                                    <i class="fas fa-angle-left right"></i>
-                                    </p>
-                                </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="{{ url('/produtos') }}" class="nav-link ml-2">
-                                            - Listar
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="{{url('/produtos/formulario')}}" class="nav-link ml-2">
-                                            - Cadastrar
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endif
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fas fa-ticket-alt"></i>
-                                <p>
-                                Rifas
-                                <i class="fas fa-angle-left right"></i>
-                                </p>
-                            </a>
+                            <a href="#" class="nav-link"> <i class="nav-icon fas fa-user"></i>Clientes</a>
                             <ul class="nav nav-treeview">
-                                {{-- <li class="nav-item">
-                                    <a href="{{ url('/produtos') }}" class="nav-link ml-2">
+                                <li class="nav-item">
+                                    <a href="{{ url('/clientes') }}" class="nav-link ml-2">
                                         - Listar
                                     </a>
-                                </li> --}}
+                                </li>
                                 <li class="nav-item">
-                                    <a href="{{url('/rifas')}}" class="nav-link ml-2">
-                                        - Comprar
+                                    <a href="{{ url('/clientes') }}" class="nav-link ml-2">
+                                        - Cadastrar
                                     </a>
                                 </li>
                             </ul>
                         </li>
-
+                        @endif
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><i class="nav-icon fas fa-clipboard"></i> Produtos</a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ url('/produtos') }}" class="nav-link ml-2">
+                                        - Listar
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{url('/produtos/formulario')}}" class="nav-link ml-2">
+                                        - Cadastrar
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -203,4 +169,6 @@
 
             <section class="content">
                 <div class="container-fluid">
-
+                    <h1>{{ $titulo }}</h1>
+                    <section class="content">
+                        <div class="container-fluid">

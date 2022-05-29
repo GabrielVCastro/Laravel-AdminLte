@@ -5,16 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Produtos extends Model
+class Rifas extends Model
 {
     use HasFactory;
-
-    protected $dates = ['deleted_at'];
     protected $fillable = [
-        'nome',
-        'descricao',
-        'preco_menor',
-        'preco_maior'
+        'documento',
+        'status',
+        'data_confirmacao',
+        'produto_id',
+        'usuario_id'
     ];
-
 }

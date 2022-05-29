@@ -19,6 +19,11 @@ abstract class AbstractRepository
         return $this->model->all();
     }
 
+    public function count()
+    {
+        return $this->model->count();
+    }
+
 
     public function getId($id)
     {

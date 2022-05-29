@@ -1,25 +1,35 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Repositories\Contracts\UsuarioRepositoryInterface;
+use App\Repositories\Eloquent\UsuarioRepository;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 class UsuariosController extends Controller
 {
-    public function index(UsuarioRepositoryInterface $model)
+    private $model;
+    public function __construct(UsuarioRepository $model)
     {
-        $usuarios = $model->all();
+
+        $this->model = $model;
+
+    }
+
+    public function index()
+    {
         $this->checkAdm();
+        $usuarios = $this->model->all();
+
         return view('clientes/lista', [
-            'clienteJs'=> true,
-            'usuarios' => $usuarios
+            'usuarios' => $usuarios,
+            'titulo'   => 'Lista de Clientes'
         ]);
     }
 
 
-    public function listar( UsuarioRepositoryInterface $model)
+    public function listar()
     {
-        $usuarios = $model->all();
+        $this->checkAdm();
+        $usuarios = $this->model->all();
         return $usuarios;
     }
 }

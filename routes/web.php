@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutosController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\SiteController;
+use App\Http\Controllers\RifasController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,12 +19,9 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('/rifa', function () {
-    return view('index');
-});
+
+Route::get('/', [SiteController::class, 'index']);
+
 
 
 Route::middleware('auth')->group(function () {
@@ -30,6 +30,12 @@ Route::middleware('auth')->group(function () {
     Route::prefix('clientes')->group(function (){
         Route::get('/', [UsuariosController::class, 'index']);
         Route::get('/formulario/{id}', [UsuariosController::class, 'abrirFormulario']);
+    });
+    Route::prefix('rifas')->group(function (){
+        Route::get('/', [RifasController::class, 'listarRifas']);
+        Route::get('/comprar/{id}', [RifasController::class, 'comprar']);
+
+
     });
 
     Route::prefix('produtos')->group(function () {
