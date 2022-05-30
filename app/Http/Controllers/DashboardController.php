@@ -22,11 +22,13 @@ class DashboardController extends Controller
     {
         $qtdUsuarios  = $this->model->count();
         $rifasUsuario = $this->modelRifas->count(Auth::user()->id);
-
+        $todasRifas   = $this->modelRifas->count_all();
+        
         return view('dashboard', [
             'qtdUsuarios'  => $qtdUsuarios,
             'titulo'       => 'Dashboard',
-            'rifasUsuario' => $rifasUsuario
+            'rifasUsuario' => $rifasUsuario,
+            'todasRifas'   => $todasRifas
         ]);
     }
 

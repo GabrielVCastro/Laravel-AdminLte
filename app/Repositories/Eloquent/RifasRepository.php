@@ -24,6 +24,10 @@ class RifasRepository
     {
         return $this->model->where('usuario_id', $id)->get();
     }
+    public function count_all()
+    {
+        return $this->model->count();
+    }
     public function count($id)
     {
         return $this->model->where('usuario_id', $id)->count();

@@ -8,7 +8,7 @@
                    <th>Código</th>
                    <th>Nome</th>
                    <th>E-mail</th>
-
+                   <th>N° de Rifas</th>
                </tr>
            </thead>
            <tbody>
@@ -18,6 +18,7 @@
                     <td>{{ $user['id'] }}</td>
                     <td>{{ $user['name'] }}</td>
                     <td>{{ $user['email'] }}</td>
+                    <td>{{ count($user->rifas) }}</td>
                 </tr>
             @endforeach
            </tbody>

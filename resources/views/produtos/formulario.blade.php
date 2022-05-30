@@ -21,15 +21,17 @@
                 <input type="text" name='descricao' id='descricao' class="form-control">
             </div>
 
-            <div class="col-12 col-md-3 mt-4">
+
+        </div>
+        <div class="row mt-4">
+            <div class="col-4">
                 <button type="submit" class="btn btn-success btn-block "><i class="fas fa-check-circle"></i> Salvar</button>
             </div>
-            <div class="col-12 col-md-3 mt-4">
+            <div class="col-4">
                 <a class="btn btn-danger btn-block "><i class="fas fa-times-circle"></i> Voltar</a>
             </div>
         </div>
     </form>
-
 
 <x-dashboard.includes.footer-painel></x-dashboard.includes.footer-painel>
 

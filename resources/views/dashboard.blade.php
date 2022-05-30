@@ -15,14 +15,30 @@
               <a href="/clientes" class="small-box-footer">Informações:<i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
+
+        <div class="col-lg-3 col-6 mt-3">
+            <!-- small box -->
+            <div class="small-box bg-warning">
+              <div class="inner">
+                <h3>{{ $todasRifas }}</h3>
+
+                <p>Total de Rifas</p>
+              </div>
+              <div class="icon">
+                <i class="nav-icon fas fa-ticket-alt"></i>
+              </div>
+              <a href="/clientes" class="small-box-footer">Informações:<i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
         @endif
+
         <div class="col-lg-3 col-6 mt-3">
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
                 <h3>{{ $rifasUsuario }}</h3>
 
-                <p>Muinhas Rifas</p>
+                <p>Minhas Rifas</p>
               </div>
               <div class="icon">
                 <i class="nav-icon fas fa-ticket-alt"></i>
