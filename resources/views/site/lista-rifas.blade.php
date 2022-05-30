@@ -15,7 +15,7 @@
                             </div>
                             <h4 class="mb-3">{{ $item['nome'] }}</h4>
                             <p class="m-0">{{ $item['descricao'] }}</p>
-                            <a class="btn btn-lg btn-primary rounded" href="">
+                            <a class="btn btn-lg btn-primary rounded" href="/register">
                                 <i class="fas fa-ticket-alt"></i>
                             </a>
                         </div>

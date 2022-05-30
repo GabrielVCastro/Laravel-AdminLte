@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Produtos;
 
 class Rifas extends Model
 {
@@ -15,4 +16,9 @@ class Rifas extends Model
         'produto_id',
         'usuario_id'
     ];
+
+    public function produtos()
+    {
+        return  $this->belongsTo(Produtos::class, 'produto_id');
+    }
 }

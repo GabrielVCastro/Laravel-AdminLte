@@ -2,26 +2,31 @@
 
 namespace App\Http\Controllers;
 use App\Repositories\Eloquent\UsuarioRepository;
+use App\Repositories\Eloquent\RifasRepository;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
-    private $model;
-    public function __construct(UsuarioRepository $model)
+    private $model, $modelRifas;
+    public function __construct(UsuarioRepository $model, RifasRepository $modelRifas)
     {
 
-        $this->model = $model;
+        $this->model      = $model;
+        $this->modelRifas = $modelRifas;
 
     }
 
     public function index()
     {
+        $qtdUsuarios  = $this->model->count();
+        $rifasUsuario = $this->modelRifas->count(Auth::user()->id);
 
-        $qtdUsuarios = $this->model->count();
         return view('dashboard', [
-            'qtdUsuarios' => $qtdUsuarios,
-            'titulo'      => 'Dashboard'
+            'qtdUsuarios'  => $qtdUsuarios,
+            'titulo'       => 'Dashboard',
+            'rifasUsuario' => $rifasUsuario
         ]);
     }
 

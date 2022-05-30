@@ -56,7 +56,6 @@ class ProdutosController extends Controller
             'preco_menor' =>  $this->converteParaDecimal($formularioProduto['preco_maior']),
             'preco_maior' =>  $this->converteParaDecimal($formularioProduto['preco_menor'])
 
-
         ]);
 
         return redirect('/produtos')->with('success', 'Cadastrado com sucesso');

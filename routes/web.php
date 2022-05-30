@@ -33,7 +33,9 @@ Route::middleware('auth')->group(function () {
     });
     Route::prefix('rifas')->group(function (){
         Route::get('/', [RifasController::class, 'listarRifas']);
+        Route::get('/listar', [RifasController::class, 'listarRifaCompradas']);
         Route::get('/comprar/{id}', [RifasController::class, 'comprar']);
+        Route::get('/excluir/{documento}', [RifasController::class, 'excluirRifa']);
 
 
     });

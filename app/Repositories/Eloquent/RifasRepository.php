@@ -20,7 +20,14 @@ class RifasRepository
 
         return $this->model->create($dados);
     }
-
+    public function get_all_id($id)
+    {
+        return $this->model->where('usuario_id', $id)->get();
+    }
+    public function count($id)
+    {
+        return $this->model->where('usuario_id', $id)->count();
+    }
     public function get_id($id)
     {
 
@@ -32,6 +39,7 @@ class RifasRepository
 
         return $this->model->destroy($id);
     }
+
 
 
 
