@@ -3,7 +3,7 @@
 
 namespace App\Repositories\Eloquent;
 use App\Models\User;
-
+use Illuminate\Support\Facades\Auth;
 
 class UsuarioRepository
 {
@@ -15,35 +15,32 @@ class UsuarioRepository
     }
     public function all()
     {
-        $model = app(User::class);
-
-        return $model->all();
+        return $this->model->all();
     }
     public function save($dados)
     {
-        $model = app(User::class);
-
-        return $model->create($dados);
+        return $this->model->create($dados);
     }
 
     public function get_id($id)
     {
-        $model = app(User::class);
-
-        return $model->find($id);
+        return $this->model->find($id);
     }
 
     public function delete($id)
     {
-        $model = app(User::class);
-
-        return $model->destroy($id);
+        return $this->model->destroy($id);
     }
 
-    public function count(){
-        $model = app(User::class);
+    public function count()
+    {
+        return $this->model->count();
 
-        return $model->count();
+    }
+
+    public function update($dados)
+    {
+        return $this->model->where('id', Auth::user()->id)->update($dados);
 
     }
 

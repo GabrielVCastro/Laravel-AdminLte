@@ -30,14 +30,15 @@ Route::middleware('auth')->group(function () {
     Route::prefix('clientes')->group(function (){
         Route::get('/', [UsuariosController::class, 'index']);
         Route::get('/formulario/{id}', [UsuariosController::class, 'abrirFormulario']);
+        Route::get('/painel', [UsuariosController::class, 'listarPainel']);
+        Route::get('/update', [UsuariosController::class, 'update']);
     });
+
     Route::prefix('rifas')->group(function (){
         Route::get('/', [RifasController::class, 'listarRifas']);
         Route::get('/listar', [RifasController::class, 'listarRifaCompradas']);
         Route::get('/comprar/{id}', [RifasController::class, 'comprar']);
         Route::get('/excluir/{documento}', [RifasController::class, 'excluirRifa']);
-
-
     });
 
     Route::prefix('produtos')->group(function () {
@@ -47,6 +48,9 @@ Route::middleware('auth')->group(function () {
         Route::get('/excluir/{id}', [ProdutosController::class, 'delete']);
         // Route::get('/formulario', [ProdutosController::class, 'abrirFormulario']);
     });
+
+
+
 });
 
 
