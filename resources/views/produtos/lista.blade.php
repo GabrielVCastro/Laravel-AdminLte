@@ -31,8 +31,7 @@
             </tbody>
         </table>
     </div>
-
 <x-dashboard.includes.footer-painel></x-dashboard.includes.footer-painel>
 
 
-@include('produtos.js')
+@include('produtos.javascript')

@@ -6,6 +6,7 @@ use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\RifasController;
+use App\Http\Controllers\QRCodeController;
 
 
 /*
@@ -49,6 +50,7 @@ Route::middleware('auth')->group(function () {
         // Route::get('/formulario', [ProdutosController::class, 'abrirFormulario']);
     });
 
+    Route::get('/qrcode', [QRCodeController::class, 'gerarQrcode']);
 
 
 });

@@ -16,7 +16,7 @@
                 @foreach ($rifas as $item)
                     <tr>
                         <td>
-                            <a href="/rifas/excluir/{{ $item['id'] }}" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
+                            <a onclick='perguntaCancelarRifa("/rifas/excluir/{{ $item["id"] }}")' class="btn btn-danger"> <i class="fa fa-trash"></i></a>
                         </td>
                         <td> {{ $item['documento'] }} </td>
                         <td>
@@ -35,4 +35,4 @@
 <x-dashboard.includes.footer-painel></x-dashboard.includes.footer-painel>
 
 
-@include('produtos.js')
+@include('produtos.javascript')

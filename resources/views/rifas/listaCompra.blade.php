@@ -15,7 +15,7 @@
                 @foreach ($produtos as $item)
                     <tr>
                         <td>
-                            <a href="/rifas/comprar/{{ $item['id'] }}" class="btn btn-success" da> <i class="fas fa-ticket-alt"></i> Comprar</a>
+                            <a onclick="$('#qrcodeModal').modal('show')" class="btn btn-success" > <i class="fas fa-ticket-alt"></i> Comprar</a>
                         </td>
                         <td> R$ 1,99 </td>
                         <td>{{ $item['nome'] }}</td>
@@ -25,7 +25,10 @@
         </table>
     </div>
 
+
+@include('rifas.modalQrcode')
+
 <x-dashboard.includes.footer-painel></x-dashboard.includes.footer-painel>
 
 
-@include('produtos.js')
+@include('rifas.javascript')

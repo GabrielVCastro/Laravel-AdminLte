@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Storage;
 
 use App\Repositories\Eloquent\ProdutosRepository;
 use Illuminate\Http\Request;
+use App\Http\Controllers\QRCodeController;
+
+
 
 class ProdutosController extends Controller
 {
@@ -29,6 +32,7 @@ class ProdutosController extends Controller
             'produtoJs'=> true,
             'produtos' => $produtos,
             'titulo'   => 'Lista de Produtos'
+
         ]);
     }
 
@@ -72,6 +76,10 @@ class ProdutosController extends Controller
 
     public function comprarRifa($id){
 
+
+    }
+
+    public function gerarPixPagamento(){
 
     }
 

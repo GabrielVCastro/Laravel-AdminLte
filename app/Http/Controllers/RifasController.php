@@ -39,7 +39,8 @@ class RifasController extends Controller
         $produtos = $this->modelProduto->all();
             return view('rifas.listaCompra',[
                 'titulo' => 'Boa Sorte!',
-                'produtos' => $produtos
+                'produtos' => $produtos,
+                'qrcode' => 13117893679
             ]);
     }
 

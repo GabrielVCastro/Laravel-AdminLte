@@ -1,3 +1,6 @@
+  <div>
+    <div id="like_button_container"></div>
+  </div>
 
     </div>
 </section>
@@ -48,8 +51,10 @@
 <script src="{{url('dist/js/demo.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 {{-- <script src="{{url('dist/js/pages/dashboard.js')}}"></script> --}}
-{{-- <script src="{{url('public/js/jquery.mask.min.js')}}"></script> --}}
-{{-- <script src="{{url('js/javascript.js')}}"></script> --}}
+<script src="{{url('js/jquery.mask.min.js')}}"></script>
+<script src="{{url('plugins/sweetalert2/sweetalert2.all.min.js')}}"></script>
+
+<script src="{{url('js/javascript.js')}}"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.12.0/datatables.min.js"></script>
 
 </body>

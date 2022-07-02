@@ -27,9 +27,10 @@
         <link rel="stylesheet" href="{{ url('plugins/daterangepicker/daterangepicker.css') }}">
         <!-- summernote -->
         <link rel="stylesheet" href="{{ url('plugins/summernote/summernote-bs4.min.css') }}">
+        <link rel="stylesheet" href="{{ url('plugins/sweetalert2/sweetalert2.min.css') }}">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.0/datatables.min.css" />
 
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     </head>
 
     <body class="hold-transition sidebar-mini layout-fixed">

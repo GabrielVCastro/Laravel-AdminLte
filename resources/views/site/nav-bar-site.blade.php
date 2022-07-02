@@ -11,7 +11,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="#header-carousel" class="nav-item nav-link nav-texto active">Inicio</a>
-                    <a href="#rifas"  class="nav-item nav-link nav-texto">Rifas</a>
+                    <a href="#rifas"  class="nav-item nav-link nav-texto">Sorteios</a>
                     @if(!Auth::check())
                         <a href="{{url('/login')}}" class="nav-item nav-link nav-texto">Login</a>
                         <a href="{{url('/register')}}" target="_blank" class="nav-item nav-link nav-texto">Cadastrar</a>
@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="{{url('assets/img/carousel-2.jpg')}}" alt="Image">
+                    <img class="w-100" src="{{url('assets/img/-2.jpg')}}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h1 class="display-1 text-white mb-md-4 animated zoomIn">Aceitamos PIX</h1>

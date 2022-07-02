@@ -25,7 +25,13 @@ class User extends Authenticatable
         'email',
         'password',
         'adm',
-        'endereco_ban'
+        'endereco_ban',
+        'telefone',
+        'celular',
+        'cidade',
+        'logradouro',
+        'numero',
+        'complemento'
     ];
 
 
